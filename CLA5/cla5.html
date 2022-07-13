@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p>Add two click events to the same button.</p>
+    <button id="myBtn">Try it</button>
+    <p id="demo" style="color: red;"></p><br>
+    <h1>mouse Action</h1>
+    <p>This example uses the addEventListener() method to add many events on the same
+        button.</p><br>
+    <button id="myBt">kkkk</button>
+    <p id="d" style="color: green;background-color:red" ;></p>   
+    <script>
+        const element = document.getElementById("myBtn");
+        element.addEventListener("click", myFunction1);
+        element.addEventListener("click", myFunction2);
+        function myFunction1() {
+            document.getElementById("demo").innerHTML += "First function was executed! "
+        }
+        function myFunction2() {
+            document.getElementById("demo").innerHTML += "Second function was executed!"
+        }
+        const k = document.getElementById("myBt");
+        k.addEventListener("mouseover", myFunction3);
+        function myFunction3() {
+            document.getElementById("d").innerHTML += "Moused over!<br>"
+        }
+    </script>
+</body>
+</html>

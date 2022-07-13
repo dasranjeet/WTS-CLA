@@ -1,0 +1,31 @@
+.container{
+    display: flex;
+}
+
+.infoedu{
+    /* background-color: yellow; */
+    height: 55vh;
+    width: 75vw;
+    margin: 144px auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.a{
+    /* background-color: red; */
+    width: 15vw;
+}
+
+.b{
+    /* background-color: blue; */
+    width: 15vw;
+}
+
+.c{
+    /* background-color: green; */
+    width: 15vw;
+}
+
+h1{
+    text-align: center;
+}

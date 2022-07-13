@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta c harset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <nav>
+                <ul>
+                    <li> <a href="index.html">Home</a> </li>
+                    <li> <a href="about.html">About</a> </li>
+                    <li> <a href="education.html">Education</a> </li>
+                    <li> <a href="skill.html">Skills</a> </li>
+                    <li> <a href="contact.html">Contact</a> </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="main">
+            <div class="contactform">
+                <h1>Contact me for work/general Enquiries.</h1>
+                <form>
+                    <div class="mb-3">
+                        <label for="clientname" class="name-label">Name</label><br>
+                        <input type="text" name="name-control" id="clientname">
+                    </div>
+                    <div class="mb-3">
+                      <label for="clientemail" class="form-label">Email address</label><br>
+                      <input type="email" class="form-control" id="clientemail" aria-describedby="emailHelp">
+                      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="clientphone" class="form-label">Phone</label><br>
+                      <input type="phone" class="form-control" id="clientphone">
+                    </div>
+                    <div class="mb-3" id="form-check">
+                      <input type="checkbox" class="form-check-input" id="isclient">
+                      <label class="form-check-label" for="isclient">I want you to work on a project with me</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary" onclick="alert('Do you want to send?')">Send</button>
+                  </form>
+            </div>
+    </div>
+</body>
+
+</html> 

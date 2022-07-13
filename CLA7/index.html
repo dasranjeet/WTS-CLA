@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #mainpage {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+      #mainpage div {
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2%;
+      }
+      #insertdatapage,
+      #deletedatapage,
+      #selectdatapage {
+        display: none;
+      }
+      #insertdatapage {
+        width: 100%;
+      }
+      #insertdatapage div {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+      #deletedatapage {
+        width: 100%;
+      }
+      #deletedatapage div {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+      #selectdatapage {
+        width: 100%;
+      }
+      #selectdatapage div {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      #insertdatapage {
+        display: none;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      #deletedatapage {
+        display: none;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      #selectdatapage {
+        display: none;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      #form1,
+      #form2,
+      #form3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      #back1,
+      #back2,
+      #back3 {
+        align-self: flex-start;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="mainpage">
+      <div>
+        <label>To insert your details into the Database: </label
+        ><button id="insertbtn">Insert Data</button>
+      </div>
+      <div>
+        <label>To delete your details from the Database: </label
+        ><button id="deletebtn">Delete Data</button>
+      </div>
+      <div>
+        <label>To view your details from the Database: </label
+        ><button id="selectbtn">Select data</button>
+      </div>
+    </div>
+    <div id="insertdatapage">
+      <div>
+        <h2>Insert Your Data</h2>
+        <button id="back1">back</button>
+        <form action="Insertdata" id="form1">
+          <input type="text" name="name" placeholder="your name" />
+          <input type="text" name="age" placeholder="your age" />
+          <input type="text" name="id" placeholder="your id" />
+          <input type="text" name="address" placeholder="your Address" />
+          <input type="submit" value="add your data" />
+        </form>
+      </div>
+    </div>
+    <div id="deletedatapage">
+      <div>
+        <h2>Delete Your Data</h2>
+        <button id="back2">back</button>
+        <form action="Deletedata" id="form2">
+          <input type="text" name="name" placeholder="your name" />
+          <input type="text" name="id" placeholder="your id" />
+          <input type="submit" value="delete your data" />
+        </form>
+      </div>
+    </div>
+    <div id="selectdatapage">
+      <div>
+        <h2>See Your Data</h2>
+        <button id="back3">back</button>
+        <form action="Seedata" id="form3">
+          <input type="text" name="id" placeholder="enter your id" />
+          <input type="submit" value="see your data" />
+        </form>
+      </div>
+    </div>
+    <script>
+      document.getElementById("insertbtn").addEventListener("click", () => {
+        document.getElementById("insertdatapage").style.display = "flex";
+        document.getElementById("mainpage").style.display = "none";
+      });
+      document.getElementById("deletebtn").addEventListener("click", () => {
+        document.getElementById("deletedatapage").style.display = "flex";
+        document.getElementById("mainpage").style.display = "none";
+      });
+      document.getElementById("selectbtn").addEventListener("click", () => {
+        document.getElementById("selectdatapage").style.display = "flex";
+        document.getElementById("mainpage").style.display = "none";
+      });
+
+      document.getElementById("back1").addEventListener("click", () => {
+        document.getElementById("mainpage").style.display = "flex";
+        document.getElementById("insertdatapage").style.display = "none";
+        document.getElementById("deletedatapage").style.display = "none";
+        document.getElementById("selectdatapage").style.display = "none";
+      });
+      document.getElementById("back2").addEventListener("click", () => {
+        document.getElementById("mainpage").style.display = "flex";
+        document.getElementById("insertdatapage").style.display = "none";
+        document.getElementById("deletedatapage").style.display = "none";
+        document.getElementById("selectdatapage").style.display = "none";
+      });
+      document.getElementById("back3").addEventListener("click", () => {
+        document.getElementById("mainpage").style.display = "flex";
+        document.getElementById("insertdatapage").style.display = "none";
+        document.getElementById("deletedatapage").style.display = "none";
+        document.getElementById("selectdatapage").style.display = "none";
+      });
+    </script>
+  </body>
+</html>
